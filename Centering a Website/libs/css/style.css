@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+* { padding:0px; margin:0px; }
+#wrapper { width: 1280px; margin: 0 auto; }
+section { background:#428787; height:980px; width:100%; float:left; }

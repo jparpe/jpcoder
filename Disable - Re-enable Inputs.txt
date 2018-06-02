@@ -1,0 +1,3 @@
+$("#submit-button").attr("disabled", true);
+
+$("#submit-button").removeAttr("disabled");

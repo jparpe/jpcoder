@@ -1,0 +1,13 @@
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+Property 	Description
+width 	The width of the virtual viewport of the device.
+device-width 	The physical width of the device's screen.
+height 	The height of the "virtual viewport" of the device.
+device-height 	The physical height of the device's screen.
+initial-scale 	The initial zoom when visiting the page. 1.0 does not zoom.
+minimum-scale 	The minimum amount the visitor can zoom on the page. 1.0 does not zoom.
+maximum-scale 	The maximum amount the visitor can zoom on the page. 1.0 does not zoom.
+user-scalable 	Allows the device to zoom in and out. Values are yes or no.

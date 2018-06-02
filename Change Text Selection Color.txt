@@ -1,0 +1,11 @@
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: #FFA;
+       color: #000;
+}
+
+/* Works in Safari */
+::selection {
+       background-color: #FFA;
+       color: #000;
+}

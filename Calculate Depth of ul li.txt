@@ -1,0 +1,7 @@
+this.addClasses = function(parent, level) {
+		parent.addClass("left-menu level-" + level);
+		if (parent.children("li").children("ul").length) {
+			this.addClasses(parent.children("li").children("ul"), level + 1);
+		}
+	};
+	this.addClasses($(".left_section > ul"), 1);

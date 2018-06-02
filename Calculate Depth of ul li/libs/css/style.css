@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+.depth { background:#f6f6f6; padding:20px;}
+.depth ul{padding:0px; margin:0px;}
+.depth li{display:block;}
+.depth a{ text-decoration:none; color:#000; font-size:16px; line-height:20px; background:#ccc; padding:5px 10px; display:block;}
+.depth ul.level-1>li{}
+.depth ul.level-1>li>a{ color:#A46DC9; background:#552B72;}
+.depth ul.level-2>li{}
+.depth ul.level-2>li>a{ color:#923158; background:#E877A5;}
+.depth ul.level-3>li{}
+.depth ul.level-3>li>a{ color:#FF9D55; background:#AA6939;}
+.depth ul.level-4>li{}
+.depth ul.level-4>li>a{ color:#DDD065; background:#776D19;}
+.depth ul.level-5>li{}
+.depth ul.level-5>li>a{ color:#677318; background:#C7D763;}
+.depth ul.level-6>li{}
+.depth ul.level-6>li>a{ color:#A3E292; background:#448F30;}
+.depth ul.level-7>li{}
+.depth ul.level-7>li>a{ color:#0E4D37; background:#7EC3AB;}
+.depth ul.level-8>li{}
+.depth ul.level-8>li>a{ color:#79AFB9; background:#255E69;}
+.depth ul.level-9>li{}
+.depth ul.level-9>li>a{ color:#516995; background:#2D4571;}
+.depth ul.level-10>li{}
+.depth ul.level-10>li>a{ color:#8F8BC8; background:#1C1750;}

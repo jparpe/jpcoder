@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tabbing{ background:#f6f6f6; padding:20px;}
+.tabbing .tab-btn{padding:0px; margin:0px 0px 10px;}
+.tabbing .tab-btn li{display:inline-block;}
+.tabbing .tab-btn li a{ text-decoration:none; color:#000; font-size:16px; line-height:20px; background:#ccc; padding:5px 10px; display:block;}
+.tabbing .tab-btn li.active a{ background:#000; color:#f6f6f6;}
+.tabbing .tab-content{padding:10px; background:#999; color:#fff;}

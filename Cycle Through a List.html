@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flowplayer · Overlay fancyBox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ul#cyclelist { width:200px; border:solid; position:relative; overflow:hidden; height:200px; list-style:none; padding:0; margin:0; }
+ul#cyclelist li { font-size:1.4em; opacity:0; position:absolute; height:100%; width:100%; }
+ul#cyclelist li:nth-child(1) { background:red; }
+ul#cyclelist li:nth-child(2) { background:green; }
+ul#cyclelist li:nth-child(3) { background:blue; }
+ul#cyclelist li:nth-child(4) { background:orange; }
+ul#cyclelist li:nth-child(5) { background:yellow; }
+</style>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+$(document).ready(function() {
+
+	 var j = 0;
+	 var delay = 2000; //millisecond delay between cycles
+	 function cycleThru(){
+	         var jmax = $("ul#cyclelist li").length -1;
+	         $("ul#cyclelist li:eq(" + j + ")")
+	                 .animate({"opacity" : "1"} ,400)
+	                 .animate({"opacity" : "1"}, delay)
+	                 .animate({"opacity" : "0"}, 400, function(){
+	                         (j == jmax) ? j=0 : j++;
+	                         cycleThru();
+	                 });
+	         };
+
+	 cycleThru();
+
+ });
+
+</script>
+</head>
+
+<body>
+<ul id="cyclelist">
+	<li> </li>
+	<li> </li>
+	<li> </li>
+	<li> </li>
+	<li> </li>
+</ul>
+</body>
+</html>

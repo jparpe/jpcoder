@@ -1,0 +1,29 @@
+.borders {
+  position: relative;
+  border: 5px solid #f00;
+}
+
+.borders:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 5px solid #ffea00;
+}
+
+
+
+.borders {
+  border: 5px solid blue; 
+  outline: 5px solid red;
+}
+
+
+.blur {
+  box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+}

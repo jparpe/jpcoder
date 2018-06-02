@@ -1,0 +1,26 @@
+var leftNav = $('.bodyContainer .leftContainer');
+				var navHomeY = leftNav.offset().top;
+				var isFixed = false;
+				var $w = $(window);
+				$w.scroll(function() {
+					var scrollTop = $w.scrollTop() + 66;
+					var shouldBeFixed = scrollTop > navHomeY;
+					if (shouldBeFixed && !isFixed) {
+						leftNav.css({
+							position: 'fixed',
+							top: 66,
+							animated: true, 
+							speed: 400,
+							easing: "linear"
+						});
+						isFixed = true;
+					}
+					else if (!shouldBeFixed && isFixed)
+					{
+						leftNav.css({
+							position: 'static'
+						});
+						isFixed = false;
+					}
+			
+				});

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+* { padding:0px; margin:0px; }
+p{ padding-bottom:20px; color:#410A4B; }
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: #8A5494;
+       color: #fff;
+}
+
+/* Works in Safari */
+::selection {
+       background-color: #8A5494;
+       color: #fff;
+}

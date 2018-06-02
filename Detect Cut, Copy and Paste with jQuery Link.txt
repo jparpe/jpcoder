@@ -1,0 +1,1 @@
+http://howtodoinjava.com/2013/12/28/jquery-detect-cut-copy-or-paste-events/

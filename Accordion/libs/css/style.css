@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.accordion { background:#f6f6f6; padding:20px 20px 10px;}
+.accordion ul{padding:0px; margin:0px 0px 10px;}
+.accordion li{display:inline-block; width:100%;}
+.accordion h3{padding:0px; margin:0px 0px 10px;}
+.accordion h3 a{ text-decoration:none; color:#000; font-size:16px; line-height:20px; background:#ccc; padding:5px 10px; display:block;}
+.accordion>ul>li.active a{ background:#000; color:#f6f6f6;}
+.accordion .acc-content{padding:10px; background:#999; color:#fff; margin-bottom:10px}

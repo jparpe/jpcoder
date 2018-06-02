@@ -1,0 +1,17 @@
+$('.bod.corporateg ul li .corporategtitle a').click(function(){
+					var curClass = $(this).attr('class');
+					if(!$(this).hasClass('active')){
+						$('.bod.corporateg ul li a').removeClass('active');
+						$('.bod.corporateg ul li').removeClass('active');
+						$('.detail-box').hide();
+						$('.detail-box#'+curClass).slideDown();
+						$(this).addClass('active');
+						$(this).parent().parent().parent().addClass('active');
+						tempScrollTop = $(document).scrollTop();
+						$("body, html").animate({scrollTop: $('.detail-box#'+curClass).offset().top - 50}, 800);
+						//$("body, html, bodyContainer").animate({scrollTop: $( $(this).attr('href') ).offset().top - 50}, 800);
+					}else{
+						$("body, html").animate({scrollTop: $( $(this).attr('href') ).offset().top - 50}, 800);
+					}
+					return false;
+			});			

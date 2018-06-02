@@ -1,0 +1,3 @@
+var siteURL = "http://" + top.location.host.toString();
+
+var $internalLinks = $("a[href^='"+siteURL+"'], a[href^='/'], a[href^='./'], a[href^='../'], a[href^='#']");

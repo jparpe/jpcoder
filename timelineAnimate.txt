@@ -1,0 +1,227 @@
+(function() {
+        $(document).ready(function() {
+        var timelineAnimate;
+        timelineAnimate = function(elem) {
+        return $(".timeline.animated .timeline-row").each(function(i) {
+        var bottom_of_object, bottom_of_window;
+        bottom_of_object = $(this).position().top + $(this).outerHeight();
+        bottom_of_window = $(window).scrollTop() + $(window).height();
+        if (bottom_of_window > bottom_of_object) {
+        return $(this).addClass("active");
+        }
+        });
+        };
+        timelineAnimate();
+        return $(window).scroll(function() {
+        return timelineAnimate();
+        });
+        });
+        
+        }).call(this);
+
+/******************************/
+
+
+.timeline { list-style: none; position: relative; max-width: 1200px; padding: 20px; margin: 0 auto; overflow: hidden; }
+.timeline:after { content: ""; position: absolute; top: 0; left: 50%; margin-left: -2px; background-color: rgba(0, 0, 0, 0.2); height: 100%; width: 4px; border-radius: 2px; display: block; }
+.timeline .timeline-row { padding-left: 50%; position: relative; z-index: 10; }
+.timeline .timeline-row .timeline-time { position: absolute; right: 50%; top: 31px; text-align: right; margin-right: 40px; font-size: 12px; line-height: 3.3; font-weight: bold; color: #000; }
+.timeline .timeline-row .timeline-time small { display: block; color: white; text-transform: uppercase; opacity: 0.75; font-size: 11px; font-weight: 400; }
+.timeline .timeline-row .timeline-icon { position: absolute; top: 25px; left: 50%; margin-left: -20px; width: 40px; height: 40px; border-radius: 50%; background-color: white; text-align: center; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); overflow: hidden; padding: 3px; color: white; font-size: 14px; z-index: 100; }
+.timeline .timeline-row .timeline-icon > div { border-radius: 50%; line-height: 34px; font-size: 16px; }
+.timeline .timeline-row .timeline-content { margin-left: 40px; position: relative; background-color: white; color: #333333; }
+.timeline .timeline-row .timeline-content:after { content: ""; position: absolute; top: 48px; left: -41px; height: 4px; width: 40px; background-color: rgba(0, 0, 0, 0.2); z-index: -1; }
+.timeline .timeline-row .timeline-content .panel-body { padding: 15px 15px 2px; position: relative; z-index: 10; border-radius: 5px; background: #e4f1d9; }
+.timeline .timeline-row .timeline-content h2 { font-size: 12px; font-weight: bold; margin-bottom: 12px; margin-top: 0; line-height: 1.5; }
+.timeline .timeline-row .timeline-content p { margin-bottom: 15px; }
+.timeline .timeline-row .timeline-content img { margin-bottom: 15px; }
+.timeline .timeline-row .timeline-content blockquote { border-color: #eeeeee; }
+.timeline .timeline-row .timeline-content blockquote footer, .timeline .timeline-row .timeline-content blockquote small, .timeline .timeline-row .timeline-content blockquote .small, .timeline .timeline-row .timeline-content blockquote.blockquote-reverse footer, .timeline .timeline-row .timeline-content blockquote.blockquote-reverse small, .timeline .timeline-row .timeline-content blockquote.blockquote-reverse .small { color: #999999; }
+.timeline .timeline-row .timeline-content .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; margin-bottom: 15px; overflow: hidden; }
+.timeline .timeline-row .timeline-content .video-container iframe, .timeline .timeline-row .timeline-content .video-container object, .timeline .timeline-row .timeline-content .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.timeline .timeline-row:nth-child(odd) { padding-left: 0; padding-right: 50%; }
+.timeline .timeline-row:nth-child(odd) .timeline-time { right: auto; left: 50%; text-align: left; margin-right: 0; margin-left: 40px; }
+.timeline .timeline-row:nth-child(odd) .timeline-content { margin-right: 40px; margin-left: 0; }
+.timeline .timeline-row:nth-child(odd) .timeline-content:after { left: auto; right: -41px; }
+.timeline.animated .timeline-row .timeline-content { opacity: 0; left: 20px; -webkit-transition: all 0.8s; -moz-transition: all 0.8s; transition: all 0.8s; }
+.timeline.animated .timeline-row:nth-child(odd) .timeline-content { left: -20px; }
+.timeline.animated .timeline-row.active .timeline-content { opacity: 1; left: 0; }
+.timeline.animated .timeline-row.active:nth-child(odd) .timeline-content { left: 0; }
+.downpaym { clear: none !important; float: left; margin-top: 20px; }
+.astric { color: #f00; margin: 0; padding: 0; }
+ @media (max-width: 1200px) {
+.timeline { padding: 15px 10px; }
+.timeline:after { left: 28px; }
+.timeline .timeline-row { padding-left: 0; margin-bottom: 16px; }
+.timeline .timeline-row .timeline-time { position: relative; right: auto; top: 0; text-align: left; margin: 0 0 6px 56px; }
+.timeline .timeline-row .timeline-time strong { display: inline-block; margin-right: 10px; }
+.timeline .timeline-row .timeline-icon { top: 52px; left: -2px; margin-left: 0; }
+.timeline .timeline-row .timeline-content { margin-left: 56px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); position: relative; }
+.timeline .timeline-row .timeline-content:after { right: auto !important; left: -20px !important; top: 32px; }
+.timeline .timeline-row:nth-child(odd) { padding-right: 0; }
+.timeline .timeline-row:nth-child(odd) .timeline-time { position: relative; right: auto; left: auto; top: 0; text-align: left; margin: 0 0 6px 56px; }
+.timeline .timeline-row:nth-child(odd) .timeline-content { margin-right: 0; margin-left: 55px; }
+.timeline.animated .timeline-row:nth-child(odd) .timeline-content { left: 20px; }
+.timeline.animated .timeline-row.active:nth-child(odd) .timeline-content { left: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+/**********************/
+
+
+
+
+<div class="timeline animated">
+<div class="timeline-row active">
+<div class="timeline-time">1975 - 1984</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/1.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>ECPL undertakes real estate and construction projects</h3>
+<p>ECPL undertakes real estate and construction projects in Agra and other towns of UP and gradually acquires a strong reputation for its fair and transparent business practices.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row active">
+<div class="timeline-time">1985</div>
+<div class="timeline-icon">
+<div class="bg-warning"><img border="0" alt="" src="/images/history/2.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Eldeco Housing and Industries Ltd. (EHIL) goes public</h3>
+<p>Eldeco Housing and Industries Ltd. (EHIL) goes public and is listed on the Bombay Stock Exchange. Public issue hailed by investors in Eldeco's catchment area as a source of local pride.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">1985 - 1993</div>
+<div class="timeline-icon">
+<div class="bg-info"><img border="0" alt="" src="/images/history/3.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Eldeco strengthens its position as the market leader</h3>
+<p>Eldeco strengthens its position as the market leader in UP. Establishes strong presence in Lucknow developing amongst others, 300 acres in joint development with Lucknow Development Authority - one of the first instances of Public Private Partnership (PPP) in the country.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">1993</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/4.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Mr. O P Bajaj joins EHIL as co-promoter</h3>
+<p><strong>Mr. O P Bajaj</strong>, a prominent Agra based businessman and erstwhile client and friend of <strong>Mr. S K Garg</strong>, joins EHIL as co-promoter. The added financial and business muscle allows the group to add many more projects to its portfolio in the next few years.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">1996</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/5.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Mr. Pankaj Bajaj joins as a promoter director on the board of EHIL</h3>
+<p><strong>Mr. Pankaj Bajaj</strong>, son of<strong> Mr. O P Bajaj</strong>, joins as a promoter director on the board of EHIL. His background includes a B Com. (Hons.) with distinction from Shri Ram College of Commerce (1993), Delhi, an MBA from IIM Ahmedabad (1995) and a short stint as a management consultant advising MNCs on their entry strategy in India.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">1996 - 1999</div>
+<div class="timeline-icon">
+<div class="bg-warning"><img border="0" alt="" src="/images/history/6.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>The Group expands its operations in Lucknow and Kanpur</h3>
+<p>The Group expands its operations in Lucknow and Kanpur. Business focus is on development of large scale residential projects.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">2000</div>
+<div class="timeline-icon">
+<div class="bg-info"><img border="0" alt="" src="/images/history/7.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Mr. Pankaj Bajaj forms a new company EIPL</h3>
+<p><strong>Mr. Pankaj Bajaj</strong> forms a new company, Eldeco Infrastructure and Properties Ltd. (EIPL). EIPL's focus is to undertake large projects in the NCR of Delhi and other states of North India.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">2000-2004</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/8.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>EIPL expands rapidly in the NCR of Delhi</h3>
+<p>EIPL expands rapidly in the NCR of Delhi with a number of successful residential projects especially in the Noida and Greater Noida region. EHIL continues its leadership position in Lucknow and Kanpur.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">2005-2008</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/9.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Eldeco group expands rapidly with the integrated township format</h3>
+<p>Eldeco group expands rapidly with the integrated township format to Sonepat, Panipat, Ludhiana and Jalandhar. One of largest Industrial Parks in the PPP format- 1200 acres in Sitarganj, Uttarakhand- is undertaken by EIPL. FDI partnership is tied up for township projects in Lucknow and Jalandhar.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">2008</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/10.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>Och Ziff takes equity position in EIPL</h3>
+<p>One of the largest Hedge Funds Group in the world -Och Ziff- takes equity position in EIPL</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">2008-2011</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/11.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>The Group focuses on execution of large scale projects</h3>
+<p>The Group focuses on execution of large scale projects in hand in the aftermath of the worldwide financial crisis. Large scale deliveries are achieved in Noida, Greater Noida, Lucknow and other locations.</p>
+</div>
+</div>
+</div>
+<div class="timeline-row">
+<div class="timeline-time">2012</div>
+<div class="timeline-icon">
+<div class="bg-primary"><img border="0" alt="" src="/images/history/12.png"></div>
+</div>
+<div class="panel timeline-content">
+<div class="panel-body">
+<h3>The Group looks for growth again</h3>
+<p>The Group looks for growth again</p>
+</div>
+</div>
+</div>
+</div>

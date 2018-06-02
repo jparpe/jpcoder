@@ -1,0 +1,9 @@
+a:link {color: blue;}
+a:visited {color: purple;}
+a:hover {color: red;}
+a:active {color: yellow;}
+
+
+Link, Visited, Hover, Active
+L, V, H, A
+LoVe, HAte
